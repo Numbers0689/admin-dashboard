@@ -1,6 +1,17 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat-italic";
+    src: url(fonts/Montserrat-Italic-VariableFont_wght.ttf);
+}
+
 body {
     margin: 0;
     padding: 0;
+    font-family: "Montserrat";
 }
 
 .con {
@@ -11,15 +22,48 @@ body {
 }
 
 .sidebar {
-    background-color: black;
+    background-color: rgb(29, 29, 29);
+    padding: 10px 30px;
+    color: white;
+    display: grid;
+    grid-template-rows: 70px 300px 1fr;
+    gap: 40px;
 }
 
-.header {
-    background-color: gray;
+.dashboard > div{
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(81, 77, 90);
+}
+
+.sidecon > div{
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.opt1 {
+    align-self: start;
+}
+
+.opt2 {
+    align-self: end;
+}
+
+.sidebar img {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(234deg) brightness(107%) contrast(101%);
+    height: 25px;
+    width: 25px;
+    justify-self: center;
+}
+
+header {
+    background-color: rgb(44, 45, 48);
 }
 
 .main {
-    background-color: lightgrey;
+    background-color: rgb(81, 77, 90);
 }
 
 .container {
