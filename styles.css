@@ -9,6 +9,19 @@
 }
 
 body {
+    --text: rgb(235, 233, 252);
+    --background: rgb(1, 1, 4);
+    --primary: rgb(58, 49, 216);
+    --secondary: rgb(2, 0, 36);
+    --accent: rgb(6, 0, 194);
+    --linearPrimarySecondary: linear-gradient(#3a31d8, #020024);
+    --linearPrimaryAccent: linear-gradient(#3a31d8, #0600c2);
+    --linearSecondaryAccent: linear-gradient(#020024, #0600c2);
+    --radialPrimarySecondary: radial-gradient(#3a31d8, #020024);
+    --radialPrimaryAccent: radial-gradient(#3a31d8, #0600c2);
+    --radialSecondaryAccent: radial-gradient(#020024, #0600c2);
+
+
     margin: 0;
     padding: 0;
     font-family: "Montserrat";
