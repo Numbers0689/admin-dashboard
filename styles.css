@@ -14,6 +14,8 @@ body {
     --primary: rgb(58, 49, 216);
     --secondary: rgb(2, 0, 36);
     --accent: rgb(6, 0, 194);
+    --static11: rgba(255, 255, 255, 0.08);
+    --linecolor:rgb(56, 55, 65);
     --linearPrimarySecondary: linear-gradient(#3a31d8, #020024);
     --linearPrimaryAccent: linear-gradient(#3a31d8, #0600c2);
     --linearSecondaryAccent: linear-gradient(#020024, #0600c2);
@@ -21,7 +23,8 @@ body {
     --radialPrimaryAccent: radial-gradient(#3a31d8, #0600c2);
     --radialSecondaryAccent: radial-gradient(#020024, #0600c2);
 
-
+    color: var(--text);
+    background-color: var(--background);
     margin: 0;
     padding: 0;
     font-family: "Montserrat";
@@ -31,13 +34,12 @@ body {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 230px 1fr;
 }
 
 .sidebar {
-    background-color: rgb(29, 29, 29);
-    padding: 10px 30px;
-    color: white;
+    background-color: var(--static11);
+    padding: 10px 10px;
     display: grid;
     grid-template-rows: 70px 300px 1fr;
     gap: 40px;
@@ -45,15 +47,16 @@ body {
 
 .dashboard > div{
     padding-bottom: 10px;
-    border-bottom: 2px solid rgb(81, 77, 90);
+    border-bottom: 2px solid var(--linecolor);
 }
 
-.sidecon > div{
+.sidecon > div {
     display: grid;
     grid-template-columns: 40px auto;
     align-items: center;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    padding: 5px 5px;
 }
 
 .opt1 {
@@ -61,7 +64,7 @@ body {
 }
 
 .opt2 {
-    align-self: end;
+    align-self: start;
 }
 
 .sidebar img {
@@ -72,14 +75,45 @@ body {
 }
 
 header {
-    background-color: rgb(44, 45, 48);
+    border-bottom: 1px solid var(--linecolor);
+    background-image: linear-gradient( to bottom right, var(--background), var(--secondary));
 }
 
 .main {
-    background-color: rgb(81, 77, 90);
+    display: grid;
+    grid-template-columns: 1fr 250px;
 }
 
 .container {
     display: grid;
     grid-template-rows: 150px 1fr;
+}
+
+.opt1 > div:hover, .opt2 > div:hover {
+    background-color: var(--primary);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.article {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.article .title {
+    grid-column: 1 / -1;
+    align-self: end;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+.card {
+    min-width: 280px;
+    min-height: 180px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    border-left: var(--accent) solid 6px;
 }
