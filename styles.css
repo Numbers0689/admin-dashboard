@@ -69,13 +69,18 @@ body {
     align-self: start;
 }
 
+.hicon {
+    height: 30px;
+    width: 30px;
+}
+
 .sidebar img {
     height: 25px;
     width: 25px;
     justify-self: center;
 }
 
-.sidebar img, .git img {
+.sidebar img, .git img, .hicon {
     filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(234deg) brightness(107%) contrast(101%);
 }
 
@@ -93,20 +98,23 @@ header {
     border-bottom: 1px solid var(--linecolor);
     background-image: linear-gradient( to bottom right, var(--background), var(--secondary));
     padding: 20px 40px;
+    padding-right: 90px;
 
     display: grid;
     grid-template-rows: 40% auto;
+    gap: 20px;
 }
 
 .main {
     display: grid;
     grid-template-columns: 1fr 280px;
     margin-bottom: 25px;
+    margin-top: 10px;
 }
 
 .container {
     display: grid;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 180px 1fr;
 }
 
 .opt1 > div:hover, .opt2 > div:hover, .opt2 > a:hover {
@@ -223,4 +231,76 @@ header {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.hone {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    flex: 1 1 auto;
+}
+
+.pfp {
+    --size: 45px;
+    height: var(--size);
+    width: var(--size);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: var(--texttwo);
+}
+
+input[type="text"]{
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: var(--static11);
+    color: var(--text);
+    border: 1px solid var(--linecolor);
+    padding: 5px 20px;
+    height: 30px;
+    flex: 2;
+    margin-right: max(30px, 20%);
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border: 1px solid var(--accent);
+}
+
+p, p + h2 {
+    margin: 0;
+}
+
+.htwo {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    padding: 10px 20px;
+    background-color: var(--accent);
+    border-radius: 25px;
+    margin: 0px 10px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    justify-self: end;
+}
+.pfpbig {
+    aspect-ratio: 1/1;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: var(--text);
+}
+
+p + h2 {
+    color: var(--primary);
+    min-width: 160px;
 }
