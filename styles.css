@@ -10,6 +10,7 @@
 
 body {
     --text: rgb(235, 233, 252);
+    --texttwo: rgb(248, 249, 253);
     --background: rgb(1, 1, 4);
     --primary: rgb(57, 48, 217);
     --primarybright: rgb(58, 49, 255);
@@ -43,6 +44,7 @@ body {
     display: grid;
     grid-template-rows: 70px 300px 1fr;
     gap: 40px;
+    color: var(--texttwo);
 }
 
 .dashboard > div{
@@ -90,6 +92,10 @@ body {
 header {
     border-bottom: 1px solid var(--linecolor);
     background-image: linear-gradient( to bottom right, var(--background), var(--secondary));
+    padding: 20px 40px;
+
+    display: grid;
+    grid-template-rows: 40% auto;
 }
 
 .main {
@@ -128,6 +134,7 @@ header {
     padding-bottom: 5px;
     font-weight: 700;
     letter-spacing: 0.07em;
+    color: var(--texttwo);
 }
 
 .card {
@@ -186,12 +193,13 @@ header {
 .ann {
     font-weight: 500;
     margin-bottom: 5px;
+    color: var(--texttwo);
 }
 
 .i-card > img {
     height: 40px;
     width: 40px;
-    background-color: var(--text);
+    background-color: var(--texttwo);
     border-radius: 50%;
 }
 
@@ -205,6 +213,7 @@ header {
 .id {
     font-size: 14px;
     font-weight: 600;
+    color: var(--texttwo);
 }
 
 .id + div {
